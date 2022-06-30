@@ -1,8 +1,8 @@
 const fs = require('fs');
 
-const [n, ...items] = fs.readFileSync("/dev/stdin").toString().trim().split("\n")
+// const [n, ...items] = fs.readFileSync("/dev/stdin").toString().trim().split("\n")
 
-// const [n, ...items] = fs.readFileSync("inputFile.txt").toString().trim().split("\n")
+const [n, ...items] = fs.readFileSync("inputFile.txt").toString().trim().split("\n")
 
 const input = items.map(i => i.split(' ').map(i => Number(i)));
 // console.log(input);
