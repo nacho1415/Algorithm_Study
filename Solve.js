@@ -1,21 +1,21 @@
 let fs = require('fs');
-let input = fs.readFileSync('/dev/stdin').toString().split('\n');
+// let input = fs.readFileSync('/dev/stdin').toString().split('\n');
 // const input = fs.readFileSync("/dev/stdin").toString().trim().split(" ");
+// const [n, ...items] = fs.readFileSync("/dev/stdin").toString().trim().split("\n").map(v => +v);
 
-// let input = fs.readFileSync('inputFile.txt').toString().split('\n');
+const [n, ...items] = fs.readFileSync("inputFile.txt").toString().trim().split("\n").map(v => +v);
 // const input = fs.readFileSync("inputFile.txt").toString().trim().split(" ");
 
-testvalue = Number(input[0])
-sum = 0
+// console.log(input)
+// const temp_array = input[1].split(" ")
+// const items = temp_array.map((i) =>(i));
 
-const dp = new Array(testvalue+1).fill(0);
-for(i=2; i<=testvalue; i++) {
-    dp[i] = dp[i-1] +1
-    if(i % 3 == 0) {
-        dp[i] = Math.min(dp[i], dp[i/3]+1)
-    }
-    if(i % 2 == 0) {
-        dp[i] = Math.min(dp[i], dp[i/2]+1)
-    }
+i = 1
+items.unshift(0)
+g = [0, 0]
+h = [0, items[1]]
+for(i=2; i<=n; i++){
+    g.push(h[i-1]+items[i])
+    h.push(Math.max(h[i-2],g[i-2])+items[i])
 }
-console.log(dp[testvalue])
+console.log(Math.max(h[n], g[n]))
