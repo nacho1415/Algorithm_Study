@@ -1,9 +1,11 @@
+
+
 let fs = require('fs');
 // let input = fs.readFileSync('/dev/stdin').toString().split('\n');
 // const input = fs.readFileSync("/dev/stdin").toString().trim().split(" ");
 
-let input = fs.readFileSync('inputfile.txt').toString().split('\n');
-// const input = fs.readFileSync("inputfile.txt").toString().trim().split(" ");
+let input = fs.readFileSync('inputFile.txt').toString().split('\n');
+// const input = fs.readFileSync("inputFile.txt").toString().trim().split(" ");
 
 sum = 0
 for(var i = 0; i <= 4; i++) {
