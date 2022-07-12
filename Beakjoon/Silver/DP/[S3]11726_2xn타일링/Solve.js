@@ -7,7 +7,7 @@ d[1] = 1
 d[2] = 2
 function dp(num) {
     if (num == 1) {
-        return 1
+        return
     } 
     if (num == 2) {
         return 2
