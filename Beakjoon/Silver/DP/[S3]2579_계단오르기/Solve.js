@@ -1,6 +1,7 @@
 let fs = require('fs');
 // let input = fs.readFileSync('/dev/stdin').toString().split('\n');
 // const input = fs.readFileSync("/dev/stdin").toString().trim().split(" ");
+// 계단
 const [n, ...items] = fs.readFileSync("/dev/stdin").toString().trim().split("\n").map(v => +v);
 
 i = 1
