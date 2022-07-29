@@ -1,6 +1,6 @@
 const fs = require('fs');
-let [n, ...arr] = fs.readFileSync("./inputFile.txt").toString().trim().split("\n");
-// let [n, ...arr] = fs.readFileSync("/dev/stdin").toString().trim().split("\n");
+// let [n, ...arr] = fs.readFileSync("./inputFile.txt").toString().trim().split("\n");
+let [n, ...arr] = fs.readFileSync("/dev/stdin").toString().trim().split("\n");
 arr = arr.map(v => +(v.replace(/\n|\r|\s*/g, "")))
 arr.sort(function(a, b)  {
     return b - a;
