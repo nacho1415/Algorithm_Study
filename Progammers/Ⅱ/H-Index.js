@@ -9,5 +9,3 @@ function solution(arr) {
     }
   }
 }
-
-console.log(solution([0, 0, 0, 0, 0]))
